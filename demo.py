@@ -7,7 +7,16 @@ with open("tests/config.json") as f:
 
 examples = []
 for k, v in config.items():
-    examples.append([f"tests/{k}", v["scale"], v["margin"], 2, False, v["text_scale"]])
+    examples.append(
+        [
+            f"tests/{k}",
+            v["scale"],
+            v["margin"],
+            1,
+            v["text_scale"],
+            False,
+        ]
+    )
 
 gradio.Interface(
     fn=process_gradio_input,
@@ -15,9 +24,9 @@ gradio.Interface(
         gradio.Image(label="Input image"),
         gradio.Number(label="Scale"),
         gradio.Number(label="Margin"),
+        gradio.Checkbox(value=False, label="Use Word Beam Search"),
         gradio.Number(label="Minimum number of words per line"),
         gradio.Number(label="Text size in visualization"),
-        gradio.Checkbox(value=False, label="Use Word Beam Search"),
     ],
     outputs=[
         gradio.Textbox(label="Read Text (Raw)"),
@@ -26,6 +35,6 @@ gradio.Interface(
     ],
     examples=examples,
     allow_flagging="never",
-    title="Detect and Read Handwritten Words",
+    title="Doctor Handwriting Detector",
     theme=gradio.themes.Monochrome(),
 ).launch()
