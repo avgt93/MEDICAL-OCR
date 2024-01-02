@@ -1,0 +1,37 @@
+{
+	"test_1.jpg": {
+		"scale": 0.34,
+		"margin": 0,
+		"text_scale": 0.5
+	},
+	"test_2.jpg": {
+		"scale": 0.35,
+		"margin": 0,
+		"text_scale": 1
+	},
+	"test_3.jpg": {
+		"scale": 0.6,
+		"margin": 3,
+		"text_scale": 0.65
+	},
+	"test_4.jpg": {
+		"scale": 0.34,
+		"margin": 0,
+		"text_scale": 0.5
+	},
+	"test_5.jpg": {
+		"scale": 0.35,
+		"margin": 0,
+		"text_scale": 1
+	},
+	"test_6.jpg": {
+		"scale": 0.6,
+		"margin": 3,
+		"text_scale": 0.65
+	},
+	"test_7.jpg": {
+		"scale": 0.6,
+		"margin": 3,
+		"text_scale": 0.65
+	}
+}
