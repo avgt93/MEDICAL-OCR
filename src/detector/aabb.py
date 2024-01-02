@@ -2,8 +2,6 @@ import numpy as np
 
 
 class AABB:
-    """axis aligned bounding box"""
-
     def __init__(self, xmin, xmax, ymin, ymax):
         self.xmin = xmin
         self.xmax = xmax

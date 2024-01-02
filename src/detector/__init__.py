@@ -62,9 +62,7 @@ def detect(img: np.ndarray, scale: float, margin: int) -> List[DetectorRes]:
         if aabb.scale(1 / scale, 1 / scale)
     ]
     h, w = img.shape
-    aabbs = [
-        aabb.clip(AABB(0, w - 1, 0, h - 1)) for aabb in aabbs
-    ]  # bounding box must be inside img
+    aabbs = [aabb.clip(AABB(0, w - 1, 0, h - 1)) for aabb in aabbs]
     clustered_aabbs = cluster_aabbs(aabbs)
 
     res = []

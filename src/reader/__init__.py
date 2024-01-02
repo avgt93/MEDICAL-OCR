@@ -1,7 +1,6 @@
 import json
 import math
 from typing import Optional
-
 import cv2
 import numpy as np
 import onnxruntime as ort
