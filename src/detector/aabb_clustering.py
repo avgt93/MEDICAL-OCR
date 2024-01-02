@@ -6,6 +6,7 @@ from sklearn.cluster import DBSCAN
 from .aabb import AABB
 from .iou import compute_dist_mat
 
+# abab clustering is used to make cluster a group of texts
 
 def cluster_aabbs(aabbs):
     if len(aabbs) < 2:

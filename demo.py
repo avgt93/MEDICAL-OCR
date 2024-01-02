@@ -2,6 +2,7 @@ import gradio
 from main import process_gradio_input
 import json
 
+# gradio is used to make the interface
 with open("tests/config.json") as f:
     config = json.load(f)
 
